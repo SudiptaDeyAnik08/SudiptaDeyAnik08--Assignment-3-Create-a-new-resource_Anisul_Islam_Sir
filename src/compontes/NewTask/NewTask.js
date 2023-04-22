@@ -2,31 +2,36 @@ import React, { useState } from "react";
 
 import "./NewTask.css"
 
-const NewTask=()=>{
+const NewTask=(props)=>{
 
-
-    const [name,setName]=useState("");
-    const [description,setDescription] = useState("");
+    const [name,setName]=useState();
+    const [description,setDescription] = useState();
+    // const task = [name,description];
+    const task = {name,description};
+   
+   
 
     const handleName=(e)=>{
         e.preventDefault();
-       
         setName(e.target.value)
-        console.log(name)
+        // console.log(name)
     }
 
     const handleDes=(e)=>{
        e.preventDefault();
        setDescription(e.target.value)
-        console.log(description)
+        // console.log(description)
     }
 
 
     const handleSubmit = (e)=>{
         e.preventDefault();
-        console.log("name: "+name+" Desc: "+description)
+        // console.log("name: "+name+" Desc: "+description)
+       
+        props.taskGather(task);
     }
 
+   
     return(
         <div className="newTask">
            
@@ -37,7 +42,7 @@ const NewTask=()=>{
                         <label htmlFor="title">Title:</label>
                     </div>
                     <div>
-                        <input type="text" name="title" id="title" value={name} onChange={handleName} className="inputWidth"/>
+                        <input type="text" name="title" id="title" value={name} onChange={handleName} className="inputWidth" required/>
                     </div>
                 </div>
                 
@@ -46,7 +51,7 @@ const NewTask=()=>{
                         <label htmlFor="description">Description:</label>
                     </div>
                     <div>
-                        <textarea name="description" id="description" value={description} onChange={handleDes} className="inputWidth"  ></textarea>
+                        <textarea name="description" id="description" value={description} onChange={handleDes} className="inputWidth" required  ></textarea>
 
                          
                     </div>

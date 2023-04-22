@@ -1,5 +1,9 @@
 .back{
 color:white;
 padding-top: 15px;
+height: 100%;
+}
 
+.taskList{
+    margin-top: 15px;
 }

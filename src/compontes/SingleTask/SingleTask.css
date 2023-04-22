@@ -1,0 +1,6 @@
+.singleTask{
+    width: 20%;
+    background-color: rgba(38, 37, 37, 0.781);
+    border-radius: 10px;
+    display: flex;
+}
