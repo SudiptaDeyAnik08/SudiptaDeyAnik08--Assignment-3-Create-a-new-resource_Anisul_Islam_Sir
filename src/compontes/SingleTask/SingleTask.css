@@ -1,6 +1,29 @@
 .singleTask{
-    width: 20%;
+    /* width: 20%; */
     background-color: rgba(38, 37, 37, 0.781);
     border-radius: 10px;
-    display: flex;
+    margin: 20px;
+    overflow: scroll;
+      
+}
+
+.singleTask h3{
+    color: yellow;
+    text-align: left;
+    padding: 3px;
+    margin-left: 2px;
+}
+
+
+
+.childSingleTask{
+    width: 20px;
+    
+}
+
+.singleTask p{
+    text-align: left;
+    padding-left: 4px;
+    padding-bottom: 4px;
+    width: 100%;
 }

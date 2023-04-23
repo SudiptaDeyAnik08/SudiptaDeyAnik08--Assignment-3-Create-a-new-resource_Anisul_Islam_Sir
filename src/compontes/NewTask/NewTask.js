@@ -7,7 +7,7 @@ const NewTask=(props)=>{
     const [name,setName]=useState();
     const [description,setDescription] = useState();
     // const task = [name,description];
-    const task = {name,description};
+   
    
    
 
@@ -27,8 +27,11 @@ const NewTask=(props)=>{
     const handleSubmit = (e)=>{
         e.preventDefault();
         // console.log("name: "+name+" Desc: "+description)
-       
+        const task = {name,description};
         props.taskGather(task);
+        setName("");
+        setDescription("");
+        
     }
 
    

@@ -7,7 +7,9 @@ const SingleTask = (props)=>{
     return(
         <div className="singleTask"> 
             <h3>{props.task.name}</h3>
-            <p>{props.task.description}</p>
+            <div className="childSingleTask">
+                <p>{props.task.description}</p>
+            </div>
         </div>
     )
 }
